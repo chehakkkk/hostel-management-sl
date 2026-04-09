@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .cont1{
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        img{
+            justify-content: center;
+            height: 300px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+        }
+        #link,#link2{
+            text-decoration: none;
+            color: red;
+            font-size: medium;
+        }
+        .c2{
+            margin-left: 20px;
+        }
+        p{
+            font-size: larger;
+            line-height: 1.6;
+            margin-bottom: 15px;
+
+        }
+        text1{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        ul,ol{
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .cont{
+            margin: 30px 0px;
+            display: flex;
+            align-items: top;
+        }
+        nav{
+            background-color: #0c0c0c;
+            padding: 10px;
+            display: flex;
+            gap: 100px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .imgcont{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        marquee{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            
+        }
+        .sliding{
+            color: rgb(243, 68, 106);
+            border: 3px solid rgb(243, 68, 106);
+            padding: 5px;
+            border-radius: 25px;
+            width: 150px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .maincont{
+            display: flex;
+            flex-direction: column;
+        }
+        #grandparent{
+            border: 3px solid rgb(100, 100, 255);
+            width: 520px;
+            height: 360px;
+        }
+        #parent{
+            border: 3px solid rgb(100, 255, 100);
+            width: 510px;
+            height: 350px;
+            margin: 5px;
+        }
+        #child{
+            border: 3px solid rgb(255, 141, 166);
+            width: 500px;
+            height: 340px;
+            margin: 5px;
+        }
+        #accommodation,#services,#rules{
+            background-color: rgb(255, 141, 166);
+            padding: 10px;
+            border:#0c0c0c 2px solid;
+            border-radius: 20px;
+        }
+        .formcont{
+            display: flex;
+            justify-content: center;
+            border: 2px solid rgb(243, 68, 106);
+            padding: 5px;
+            border-radius: 30px;
+            gap: 6px;
+        }
+        iframe{
+            border-radius: 20px;
+            width: 50%;
+            height: 50%;
+        }
+        img{
+            border: 3px black solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincont">
+        <div class="container">
+            <nav>
+                <a href="#cont2">Home</a>
+                <a href="#services">Services</a>
+                <a href="#rules">Rules and Regulations</a>
+                <a href="#accomodation">Accomodation Details</a>
+            </nav>
+            <div class="cont1">
+                <div class="imgcont">
+                    <div class="cont">
+                            <img src="image.jpeg" usemap="#campus" height="10vw" width="auto" style="border-radius: 20px;"/>
+            
+                            <map name="campus">
+                            
+                            <area shape="rect" coords="50,60,480,220" alt="Building" href="https://www.isro.gov.in/">
+                            <area shape="rect" coords="0,220,533,300" alt="Garden" href="https://btsworldtourofficial.com/">
+                            <area shape="rect" coords="70,150,100,220" alt="Tree 1" href="https://www.tinkercad.com/dashboard">
+                            <area shape="rect" coords="150,140,180,220" alt="Tree 2" href="https://weverse.io/">
+                            <area shape="rect" coords="230,140,260,220" alt="Tree 3" href="https://leetcode.com/problemset/">
+                            </map>
+                    </div>
+                    <text1> For more info refer to the location,</text1>
+                    <iframe src="https://www.programiz.com/cpp-programming/online-compiler/" frameborder="0" id="grandparent" target></iframe>
+                    <iframe src="https://kuk.ac.in/" frameborder="0" id="parent" target="_parent" ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.8288943155308!2d76.816876674566!3d29.95559992277644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e38b040ffffff%3A0x73873280de79b74b!2sKurukshetra%20University!5e0!3m2!1sen!2sin!4v1769677157652!5m2!1sen!2sin" width="500" height="340" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:3px solid rgb(245, 92, 118);" id="child" target="parent"></iframe>
+                    
+                </div>
+                <div class="c2" id="cont2">
+                    <h1 style="text-align: center;">Cauvery Bhawan</h1>
+                    <h3 style="text-align: center;">Girls Hostel No. 3</h3>
+                    <br>
+                    <marquee behavior="" direction="right"><div class="sliding">Girls Rock !!</div></marquee>
+                    <div class="content">
+                        </p>
+                        Cauvery Bhawan Hostel is assigned to 1st year B.Tech students. The hostel provides a safe and comfortable living environment for students. It offers well-furnished rooms with proper ventilation, along with 24X7 electricity and water supply. Clean drinking water and mess facilities are available for all residents. The hostel also provides Wi-Fi connectivity to support academic needs, along with a common room. Regular housekeeping doesn't ensures cleanliness, and laundry facilities are not provided for convenience. Security is maintained through warden supervision. Basic medical assistance and first-aid facilities are also available, making the hostel a comfortable and secure place for students to live and study.
+                        <p>
+                        <p>
+                            <text1 id="services">Services provided: </text1> 
+                            <ul>
+                                <li>Well-furnishes rooms</li>
+                                <li>24X7 electricity and water supply</li>
+                                <li>Mess facility</li>
+                                <li>Wi-Fi/Internet access</li>
+                                <li>Laundry facility</li>
+                                <li>Basic medical assistance and first-aid facilities</li>
+                                <li>Gym/Sports facilities</li>
+                                <li>RO Water</li>
+                            </ul> <br>
+                        </p> 
+                        <p>
+                            <text1 id="rules"> Rules and Regulations: </text1>
+                            <ol>
+                                <li>Maintain cleanliness and hygiene in the hostel premises.</li>
+                                <li>Follow the mess timings and maintain decorum during meals.</li>
+                                <li>Adhere to the hostel curfew timings.</li>
+                                <li>Report any maintenance issues promptly to the hostel warden.</li>
+                                <li>Use of electrical appliances like electric kettle, induction stoves, press etc. is prohibited.</li>
+                                <li>Participate in hostel activities and contribute to a positive living environment.</li>
+                            </ol> <br>
+                        </p>
+                        <p>
+                            <text1 id="accommodation">Accomodation Details: </text1>
+                            <ul>
+                                <li>Single occupancy rooms</li>
+                                <li>Furnished with bed, study table, chair, and wall-engraved cupboard</li>
+                                <li>Common washrooms on each floor</li>
+                                <li>Semester fee: <br>
+                                    Hostel fee: Rs. 40,000 <br>
+                                    Mess advance: Rs. 40,000
+                                </li>
+                                <li>For hostel admission or any enquiry, contact <a id="link" href="https://nitkkr.ac.in/iic-2/">HERE</a></li>
+                            </p> <br> <br>                    
+                            <div style="margin-bottom: 20px;margin-left: 20px;" class="formcont">
+                                <text1>For leave application, kindly fill the form given</text1>
+                                <a id="link2" href="./hostellogin.html">HERE</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

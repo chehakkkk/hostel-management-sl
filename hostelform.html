@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .maincont{
+            margin: 20px;
+        }
+        .cont{
+            background-color: white;
+            width: 40vw;
+            border: 2px solid rgb(150, 150, 236);
+            border-radius: 10px;
+            margin: auto;
+        }
+        input{
+            border-radius: 5px;
+        }
+        .formcont{
+            margin: 20px;
+        }
+        legend{
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="maincont">
+        <h1 style="text-align: center;">Leave Application Form</h1>
+        <div class="cont">
+            <form action="submit.php" method="post" class="formcont" autocomplete="off">
+                <!-- <fieldset> -->
+                    <!-- <legend>Personal Information</legend> -->
+                    <label for="st_name">Student Name : </label> <br>
+                    <input type="text" id="st_name"> <br> <br>
+                    <label for="st_id">Student ID : </label> <br>
+                    <input type="text" id="st_id"> <br> <br>
+                    <label for="email">Email Address : </label> <br>
+                    <input type="email" id="email"> <br> <br>
+                    <label for="phone">Contact number : </label> <br>
+                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone"> <br> <br>
+                    <label for="l_start">Leave Start Date : </label> <br>
+                    <input type="date" id="l_start" min="2026-02-05"> <br> <br>
+                    <label for="l_end">Leave End Date : </label> <br>
+                    <input type="date" id="l_end" max="2026-06-19"> <br> <br>
+                    <label for="reason">Reason for medical leave : </label> <br>
+                    <input type="radio" name="reason" id="sick" value="sick">
+                    <label for="reason">Medical Issues</label> <br>
+                    <input type="radio" name="reason" id="personal" value="personal">
+                    <label for="reason">Personal Issues</label> <br>
+                    <input type="radio" id="urgent" value="urgent" name="reason">
+                    <label for="reason">Urgent Work</label> <br>
+                    <input type="radio" name="reason" id="other" value="other">
+                    <label for="reason">Other</label> <br> <br>
+                    <label for="location">Location : </label> <br>
+                    <input type="checkbox" name="faridabad">
+                    <label for="faridabad">Faridabad</label> <br>
+                    <input type="checkbox" name="manali"> 
+                    <label for="manali">Manali</label><br>
+                    <input type="checkbox" name="gurgaon_ka_koode_ka_dher">
+                    <label for="gurgaon_ka_koode_ka_dher">Gurgaon Ka Koode Ka Dher</label> <br> <br>
+                    <label for="company">Your companion for the leave : </label> <br>
+                    <select name="company" id="company" size="3" multiple style="width:200px; height:52px;">
+                        <option value="---" selected>----</option>
+                        <option value="">Family</option>
+                        <option value="">Friends</option>
+                        <option value="">Colleagues</option>
+                        <option value="">Others</option>
+    
+                    </select> <br> <br> <br>
+                    <label for="additional">Additional Information : </label> <br>
+                    <textarea name="additional" id="additional" cols="50" rows="5"></textarea> <br> <br>
+                    <input type="submit" value="SUBMIT" onclick="alert('Form submitted successfully!')">
+                <!-- </fieldset> -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>

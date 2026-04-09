@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Login</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg,#531515,#752616,#c72828);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container{
+      background: #b9b8b8;
+      padding: 20px;
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 300px;
+      height: auto;
+    }
+    .login-container h2{
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .login-container input{
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #5a0b0b;
+      border-radius: 8px;
+    }
+    .login-container button{
+      width: 100%;
+      padding: 8px;
+      margin: 5px 1% 0 1%;
+      background-color: #5a0b0b;
+      color: white;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    .captcha-box{
+      background: white;
+      text-align: center;
+      padding: 5px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label>Username:</label>
+    <input type="text" id="username" placeholder="Enter username" required>
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter password" required>
+    <label>CAPTCHA:</label>
+    <div class="captcha-box" id="captchaQuestion"></div>
+    <input type="number" id="captchaInput" placeholder="Enter answer" required>
+    <br>
+    <button type="submit">Login</button>
+    
+  </form>
+</div>
+
+<script>
+let answer;
+
+function newCaptcha(){
+    const a = Math.floor(Math.random()*10)+1;
+    const b = Math.floor(Math.random()*10)+1;
+    answer = a + b;
+    document.getElementById('captchaQuestion').innerText = `${a} + ${b} = ?`;
+}
+
+newCaptcha(); // generate initial captcha
+
+document.getElementById('loginForm').onsubmit = function(e){
+    e.preventDefault();
+
+    const enteredUsername = document.getElementById('username').value.trim();
+    const enteredPassword = document.getElementById('password').value.trim();
+    const userAnswer = parseInt(document.getElementById('captchaInput').value);
+
+    const storedUsername = localStorage.getItem('userUsername')?.trim();
+    const storedPassword = localStorage.getItem('userPassword')?.trim();
+
+    if(userAnswer !== answer){
+        alert("Wrong CAPTCHA! Try again.");
+        newCaptcha();
+        return;
+    }
+
+    if(enteredUsername === storedUsername && enteredPassword === storedPassword){
+        alert("Login Successful!");
+        window.location.href = "hostelform.html"; // redirect after login
+    } else {
+        alert("Invalid username or password.");
+    }
+};
+</script>
+
+</body>
+</html>
